@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Venue</title>
+</head>
+<body>
+	<form action="#" th:action="@{/updateVenue/{id}(id=${venue.id})}" th:object="${venue}" method="post">
+		<label for="name">Name: </label>
+		<input type="text" th:field="*{name}" id="name" placeholder="Name">
+		<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+		
+		<label for="city">City: </label>
+		<input type="text" th:field="*{city}" id="city" placeholder="City">
+		<span th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></span>
+		
+		<label for="state">State: </label>
+		<input type="text" th:field="*{state}" id="state" placeholder="State">
+		<span th:if="${#fields.hasErrors('state')}" th:errors="*{state}"></span>
+		
+		<label for="yearEstablished">Year Established: </label>
+		<input type="text" th:field="*{yearEstablished}" id="yearEstablished" placeholder="yyyy">
+		<span th:if="${#fields.hasErrors('yearEstablished')}" th:errors="*{yearEstablished}"></span>
+		
+		<input type="submit" value="Update Venue">
+	</form>
+</body>
+</html>
