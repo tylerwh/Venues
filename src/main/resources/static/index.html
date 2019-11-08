@@ -3,9 +3,43 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Venues Home Page</title>
+<style>
+a {
+	text-decoration: none;
+	font-size: 18px;
+	padding: 3px;
+	border: 2px solid #9900ab;
+}
+a:hover{
+	background-color: #9900ab;
+	color: #ffffff;
+}
+div{
+	margin: auto;
+}
+.header{
+	font-family: "Lucinda Sans", sans-serif;
+	font-size: 26px;
+	font-style: italic;
+	text-align: center;
+	background-color: #9900ab;
+  	color: #ffffff;
+  	padding: 15px;
+}
+.links{
+	text-align: center;
+	padding: 1.5em;
+}
+</style>
 </head>
 <body>
+<div class="header">
+	<h1><u>Venues</u></h1>
+</div>
+<div class="links">
 	<a href="/viewAll">View All Venues</a>
+	<p>  |   </p>
 	<a href="/addVenue">Add a New Venue</a>
+</div>
 </body>
 </html>

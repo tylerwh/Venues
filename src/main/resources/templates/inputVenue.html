@@ -3,16 +3,54 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add New Venue</title>
+<style>
+.outer {
+	display: grid;
+	padding-top: 5px;
+	grid-row-gap: 5px;
+}
+
+.form {
+	display: grid;
+	background-color: lightGray;
+	padding-top: 3px;
+	float: left;
+	width: 33%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.link {
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+
+.link:hover {
+	background-color: #9900ab;
+	border: 2px solid #9900ab;
+	color: #ffffff;
+	padding: 3px;
+}
+</style>
 </head>
 <body>
-	<form name='v' th:object="${newVenue}" th:action="@{/addVenue}" method="POST">
-		Name: <input name="name" size="30"> <br />
-		City: <input name="city" size="25"> <br />
-		State: <input name="state" size="20"> <br />
-		Year Established: <input name="yearEstablished" size="4"> <br /><br />
-		
-		<input name="submit" type="submit" value="Submit" />
-	</form>
-	<a href="/viewAll">View All Venues</a>
+	<div class="outer">
+		<form name='v' th:object="${newVenue}" th:action="@{/addVenue}"
+			method="POST">
+			<div class="form">
+				Name: <input name="name" size="30"> <br /> 
+				City: <input name="city" size="25"> <br /> 
+				State: <input name="state" size="20"> <br /> 
+				Year Established: <input name="yearEstablished" size="4" placeholder="yyyy"> <br /> <br /> 
+				<input name="submit" type="submit" value="Submit" />
+			</div>
+		</form>
+		<div class="link">
+			<a href="/viewAll">View All Venues</a>
+		</div>
+	</div>
 </body>
 </html>
